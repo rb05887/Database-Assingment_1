@@ -1,0 +1,31 @@
+*******create database Assingment_1;
+******use Assingment_1;
+
+1= create table products
+(product_id numeric(10), 
+product_name varchar(20),
+price numeric(10),
+stock_quantity numeric(10));
+
+2= alter table products add category varchar(10);
+
+3= alter table products modify price numeric(15,2);
+
+4= alter table products modify product_id numeric(10) primary key;
+
+
+5=  create table orders(id numeric(5) primary key, name varchar(20), product_id numeric(10) references products(product_id ));
+
+6=  insert into products values(111,'amul',20,5,'dairy');
+    insert into products values(222,'parleG',20,5,'biscuit');
+
+7=  update products set price=50 where product_id=111;
+
+
+8=  delete from products where stock_quantity=0;
+
+
+9=  select * from products;
+
+
+10= delete from products;
